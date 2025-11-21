@@ -1,36 +1,15 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Solana Hello World App
 
-## Getting Started
+![Solana Hello World Screenshot](https://alchemyapi-res.cloudinary.com/image/upload/v1763746952/Screenshot_2025-11-21_at_9.42.27_AM_efycbi.png)
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This is a minimal Next.js demo DApp for interacting with a Solana on-chain "Hello World" program using the Phantom wallet and the Alchemy RPC proxy. Users can connect their Solana wallet (e.g., Phantom), send a simple "ping" transaction to their deployed Solana program on **devnet**, and view the transaction signature and program logs directly in the app UI. 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Features:**
+- Connect to your Solana wallet (Phantom or compatible)
+- Send a transaction to your Hello World program on Solana devnet
+- View transaction signature and link to Solana Explorer
+- See logs output by your program
+- All RPC requests are securely proxied via a Next.js API route to protect your Alchemy API key
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+_Note:_ This app is meant for demo/educational purposes and uses client-side wallet connections only. See the source code for details on how transactions are built and sent with `@solana/web3.js` and how the Alchemy API proxy is implemented.
